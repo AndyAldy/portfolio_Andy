@@ -443,6 +443,75 @@ body {
 .fade-in {
   animation: fadeInEffect 0.5s ease-in-out forwards;
 }
+@media (max-width: 768px) {
+  /* Mengubah posisi navigasi menjadi melayang di bawah ala Aplikasi Mobile */
+  .profile-nav {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    margin: 0;
+    padding: 10px 15px;
+    
+    /* Efek Glassmorphism (Kaca Transparan) */
+    background: rgba(15, 23, 42, 0.75); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(6, 182, 212, 0.2);
+    z-index: 9999;
+    
+    /* Membagi ruang agar tombol rata tengah */
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  /* Menata ulang tombol: Ikon di atas, teks di bawah */
+  .nav-tab-btn {
+    flex-direction: column;
+    padding: 8px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border-radius: 20px;
+    gap: 5px;
+    flex: 1; /* Membagi ruang tombol secara rata */
+  }
+
+  .nav-tab-btn i {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+  }
+
+  /* Menyesuaikan tombol yang sedang aktif agar lebih mencolok di versi Mobile */
+  .nav-tab-btn.active {
+    background: rgba(6, 182, 212, 0.15);
+    color: var(--primary);
+    box-shadow: inset 0 0 10px rgba(6, 182, 212, 0.1);
+  }
+
+  /* Memberikan ruang ekstra di bawah agar konten web & footer tidak tertutup navigasi */
+  .page-content-wrapper {
+    padding-bottom: 100px !important;
+  }
+  
+  .footer {
+    padding-bottom: 130px;
+  }
+
+  /* Tambahan: Menyesuaikan ukuran teks Header di HP agar lebih proporsional */
+  .hero h1, .glitch-text {
+    font-size: 2.2rem;
+  }
+  
+  .profile-header h2 {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
 
 @keyframes fadeInEffect {
   from {
