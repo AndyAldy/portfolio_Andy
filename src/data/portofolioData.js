@@ -30,7 +30,7 @@ export const projectsData = [
     id: 2,
     title: "Web Manajemen Toko Kelontong", // [cite: 19]
     category: "Tech Engineering",
-    description: "Mengembangkan aplikasi web manajemen toko secara mandiri menggunakan React.js dalam waktu 7 hari[cite: 21]. Mengimplementasikan struktur frontend yang responsif, cepat, dan efisien untuk pengelolaan data inventaris barang[cite: 22].",
+    description: "Mengembangkan aplikasi web manajemen toko secara mandiri menggunakan React.js dalam waktu 7 hari. Mengimplementasikan struktur frontend yang responsif, cepat, dan efisien untuk pengelolaan data inventaris barang.",
     tech: ["React.js", "JavaScript", "HTML5", "CSS3"] // [cite: 19, 30]
   },
   {
@@ -44,7 +44,7 @@ export const projectsData = [
     id: 4,
     title: "Digitalisasi & Pengembangan Potensi Desa Beji", // [cite: 23, 24]
     category: "Social Tech",
-    description: "Berkontribusi dalam program pengabdian masyarakat (KKN) dengan fokus utama pada pemanfaatan platform digital untuk manajemen dokumentasi teknis serta publikasi potensi lokal desa[cite: 24, 25].",
+    description: "Berkontribusi dalam program pengabdian masyarakat (KKN) dengan fokus utama pada pemanfaatan platform digital untuk manajemen dokumentasi teknis serta publikasi potensi lokal desa.",
     tech: ["Web Technologies", "Digitalization", "Technical Documentation"] // [cite: 25]
   }
 ];

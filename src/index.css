@@ -382,3 +382,75 @@ body {
   .hero h1 { font-size: 2.5rem; }
   .filter-tabs { flex-wrap: wrap; }
 }
+
+.profile-header {
+  padding-top: 50px;
+  text-align: center;
+  background: radial-gradient(circle at center, #1e2942 0%, var(--bg-main) 100%);
+  padding-bottom: 20px;
+}
+
+/* Navigasi baru di bawah profil */
+.profile-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0 30px 0;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(19, 28, 46, 0.4);
+}
+
+.nav-tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-tab-btn i {
+  font-size: 0.95rem;
+}
+
+.nav-tab-btn:hover {
+  color: var(--primary);
+  background: rgba(6, 182, 212, 0.05);
+}
+
+.nav-tab-btn.active {
+  color: #ffffff;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+}
+
+/* Wrapper Konten Tab */
+.page-content-wrapper {
+  min-height: 400px;
+  padding-top: 10px !important;
+  padding-bottom: 50px !important;
+}
+
+/* Animasi transisi halus saat halaman berganti */
+.fade-in {
+  animation: fadeInEffect 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
