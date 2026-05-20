@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { personalInfo, projectsData } from './data/portfolioData';
+import { useState, useEffect } from 'react';
+import { personalInfo, projectsData } from './data/portofolioData'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [filteredProjects, setFilteredProjects] = useState(projectsData);
   const [isScrolled, setIsScrolled] = useState(false);
   const [btnLoading, setBtnLoading] = useState(false);
+
+  // Menghitung filter secara langsung saat proses render, tanpa memicu re-render ganda lewat useEffect.
+  const filteredProjects = activeFilter === 'All' 
+    ? projectsData 
+    : projectsData.filter(p => p.category === activeFilter);
 
   // Efek Navbar saat di-scroll
   useEffect(() => {
@@ -16,15 +20,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Handler untuk filter proyek secara interaktif
-  useEffect(() => {
-    if (activeFilter === 'All') {
-      setFilteredProjects(projectsData);
-    } else {
-      setFilteredProjects(projectsData.filter(p => p.category === activeFilter));
-    }
-  }, [activeFilter]);
 
   const handleExploreClick = (e) => {
     e.preventDefault();
@@ -53,7 +48,6 @@ function App() {
       <header id="home" className="hero">
         <div className="hero-content">
           <div className="profile-frame">
-            {/* Menggunakan path relatif public folder untuk foto profil Anda */}
             <img 
               src="/assets/img/profile.jpg" 
               alt={personalInfo.name} 
