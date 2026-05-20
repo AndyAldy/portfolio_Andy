@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 import fotoProfil from '/assets/img/profile1.jpg';
 import { personalInfo, projectsData } from './data/portofolioData'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -172,6 +172,7 @@ function App() {
       <footer className="footer">
         <p>&copy; 2026 {personalInfo.name}. Built with React.js & Modern Tab Layout.</p>
       </footer>
+      <Analytics />
     </div>
   );
 }
