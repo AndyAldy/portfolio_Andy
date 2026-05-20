@@ -19,12 +19,8 @@ function App() {
       <header className="profile-header">
         <div className="profile-frame">
           <img 
-            src="/assets/img/profile.jpg" 
-            alt={personalInfo.name} 
+            src="src/assets/img/profile1.jpg" 
             className="profile-img"
-            onError={(e) => {
-              e.target.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500";
-            }}
           />
         </div>
         <h1 className="glitch-text">{personalInfo.name}</h1>
