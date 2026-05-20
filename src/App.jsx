@@ -19,7 +19,7 @@ function App() {
       <header className="profile-header">
         <div className="profile-frame">
           <img 
-            src="src/assets/img/profile1.jpg" 
+            src="public/assets/img/profile1.jpg" 
             className="profile-img"
           />
         </div>
