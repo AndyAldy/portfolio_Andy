@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import fotoProfil from '/assets/img/profile1.jpg';
+import fotoProfil from '/assets/img/profile.jpg';
 import { personalInfo, projectsData } from './data/portofolioData'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
