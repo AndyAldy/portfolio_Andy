@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import fotoProfil from './assets/profile.jpg';
 import { personalInfo, projectsData } from './data/portofolioData'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -18,10 +19,7 @@ function App() {
       {/* 1. Header Profile: Menetap di bagian paling atas halaman */}
       <header className="profile-header">
         <div className="profile-frame">
-          <img 
-            src="public/assets/img/profile1.jpg" 
-            className="profile-img"
-          />
+        <img src={fotoProfil} alt="Andy Aldyansyah" className="profile-img" />
         </div>
         <h1 className="glitch-text">{personalInfo.name}</h1>
         <h2>{personalInfo.title} | {personalInfo.institution}</h2>
