@@ -1,5 +1,5 @@
 export const personalInfo = {
-  name: "ANDY ALDYANSYAH", // [cite: 10]
+  name: "Andy Aldyansyah", // [cite: 10]
   title: "Mahasiswa Teknik Informatika", // [cite: 11]
   institution: "Universitas Duta Bangsa Surakarta", // [cite: 17]
   tagline: "Full-stack Developer & IoT Specialist yang berfokus pada efisiensi kode dan analisis masalah.", // [cite: 13, 15]
