@@ -5,8 +5,8 @@ export const personalInfo = {
   tagline: "Full-stack Developer & IoT Specialist yang berfokus pada efisiensi kode dan analisis masalah.", // [cite: 13, 15]
   about: "Mahasiswa Teknik Informatika yang berfokus pada Full-stack Development dan IoT. Memiliki rekam jejak dalam mengelola 32 repositori GitHub serta berpengalaman membangun aplikasi mobile dengan Flutter dan sistem web menggunakan CodeIgniter 4 dan React.js. Terbukti sebagai fast-learner dengan kemampuan menguasai fundamental teknologi baru secara mandiri dalam waktu singkat serta memiliki keahlian mendalam dalam analisis masalah (debugging).",
   skills: {
-    Backend: ["Dart", "PHP", "JavaScript", "Python", "Java", "REST API", "Kotlin", "MYSQL", "SQLite", "GOLang"], // [cite: 30]
-    Frontend: ["HTML5", "CSS3", "Dart" ],
+    Backend: ["Dart", "PHP", "Python", "Java", "REST API", "Kotlin", "MYSQL", "SQLite", "GOLang"], // [cite: 30]
+    Frontend: ["HTML5", "CSS3", "Dart", "JavaScript"],
     frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Node.js", "Bootstrap", "Laravel", "Wails"], // [cite: 31]
     iot: ["ESP32", "Arduino", "MQTT Protocol", "Sensor Integration"], // [cite: 32]
     tools: ["Git/GitHub", "Visual Studio Code", "Java NetBeans", "XAMPP"] // [cite: 32]
