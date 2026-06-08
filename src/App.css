@@ -182,3 +182,35 @@
     border-right-color: var(--border);
   }
 }
+
+/* =========================================
+   STYLE UNTUK TOMBOL TRANSLATE BAHASA
+   ========================================= */
+.lang-toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.lang-toggle-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--primary, #06b6d4); /* Fallback ke warna biru cycan jika var(--primary) belum diset */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.lang-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(6, 182, 212, 0.5);
+  background: var(--primary-hover, #0891b2); 
+}
+
+.lang-toggle-btn:active {
+  transform: translateY(0);
+}
