@@ -238,34 +238,53 @@
   letter-spacing: 2px;
 }
 
-/* Grid Layout agar Card sejajar di layar besar */
+/* --- CSS Compact untuk Skills Card --- */
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Card diperkecil min-widthnya */
+  gap: 15px; /* Jarak antar card diperkecil */
 }
 
-/* Base Style untuk semua Card */
 .skills-group {
   background: rgba(30, 41, 59, 0.4);
   backdrop-filter: blur(10px);
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
+  padding: 15px; /* Padding dikurangi dari 25px ke 15px */
+  border-radius: 12px; /* Border radius sedikit lebih kecil */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
   position: relative;
   overflow: hidden;
-}
-
-.skills-group:hover {
-  transform: translateY(-8px);
 }
 
 .card-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 10px; /* Jarak ikon ke teks diperkecil */
+  margin-bottom: 10px; /* Jarak ke tag diperkecil */
+}
+
+.icon-box {
+  width: 32px; /* Ikon diperkecil */
+  height: 32px;
+  border-radius: 8px;
+  font-size: 0.9rem; /* Ikon font size diperkecil */
+}
+
+.card-header h4 {
+  font-size: 1rem; /* Judul card diperkecil */
+  margin: 0;
+  font-weight: 600;
+}
+
+.tag {
+  padding: 4px 10px; /* Tag dibuat jauh lebih compact */
+  border-radius: 6px;
+  font-size: 0.75rem; /* Font tag diperkecil */
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-block;
+  cursor: default;
 }
 
 .icon-box {
