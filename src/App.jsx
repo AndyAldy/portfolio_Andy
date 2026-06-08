@@ -92,9 +92,15 @@ function App() {
               <div className="skills-display">
                 <h3>Core Technical Expertise</h3>
                 <div className="skills-group">
-                  <h4>Languages</h4>
+                  <h4>Backend</h4>
                   <div className="tags">
-                    {personalInfo.skills.languages.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    {personalInfo.skills.Backend.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                  </div>
+                </div>
+              <div className="skills-group">
+                  <h4>Frontend</h4>
+                  <div className="tags">
+                    {personalInfo.skills.Frontend.map(skill => <span key={skill} className="tag">{skill}</span>)}
                   </div>
                 </div>
                 <div className="skills-group">

@@ -5,10 +5,11 @@ export const personalInfo = {
   tagline: "Full-stack Developer & IoT Specialist yang berfokus pada efisiensi kode dan analisis masalah.", // [cite: 13, 15]
   about: "Mahasiswa Teknik Informatika yang berfokus pada Full-stack Development dan IoT. Memiliki rekam jejak dalam mengelola 32 repositori GitHub serta berpengalaman membangun aplikasi mobile dengan Flutter dan sistem web menggunakan CodeIgniter 4 dan React.js. Terbukti sebagai fast-learner dengan kemampuan menguasai fundamental teknologi baru secara mandiri dalam waktu singkat serta memiliki keahlian mendalam dalam analisis masalah (debugging).",
   skills: {
-    languages: ["Dart", "PHP", "JavaScript", "Python", "Java"], // [cite: 30]
-    frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Node.js"], // [cite: 31]
+    Backend: ["Dart", "PHP", "JavaScript", "Python", "Java", "REST API", "Kotlin", "MYSQL", "SQLite", "GOLang"], // [cite: 30]
+    Frontend: ["HTML5", "CSS3", "Dart" ],
+    frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Node.js", "Bootstrap", "Laravel", "Wails"], // [cite: 31]
     iot: ["ESP32", "Arduino", "MQTT Protocol", "Sensor Integration"], // [cite: 32]
-    tools: ["Git/GitHub", "Visual Studio Code", "Java NetBeans", "MySQL", "XAMPP"] // [cite: 32]
+    tools: ["Git/GitHub", "Visual Studio Code", "Java NetBeans", "XAMPP"] // [cite: 32]
   },
   contacts: {
     email: "andyaldyansyah11@gmail.com", // [cite: 6]
@@ -31,7 +32,7 @@ export const projectsData = [
     title: "Web Manajemen Toko Kelontong", // [cite: 19]
     category: "Tech Engineering",
     description: "Mengembangkan aplikasi web manajemen toko secara mandiri menggunakan React.js dalam waktu 7 hari. Mengimplementasikan struktur frontend yang responsif, cepat, dan efisien untuk pengelolaan data inventaris barang.",
-    tech: ["React.js", "JavaScript", "HTML5", "CSS3"] // [cite: 19, 30]
+    tech: ["React.js", "JavaScript", "HTML5", "CSS3", "REST API"] // [cite: 19, 30]
   },
   {
     id: 3,
