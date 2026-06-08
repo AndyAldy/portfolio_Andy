@@ -122,34 +122,40 @@ function App() {
                 <p>{personalInfo.about}</p>
               </div>
               
-              <div className="skills-display">
+<div className="skills-display">
                 <h3>{personalInfo.uiText.coreTech}</h3>
-                <div className="skills-group">
-                  <h4>Backend</h4>
+                
+                {/* TAMBAHKAN CLASS 'backend-card' DI SINI */}
+                <div className="skills-group backend-card">
+                  <h4><i className="fas fa-server"></i> Backend</h4>
                   <div className="tags">
                     {personalInfo.skills.Backend.map(skill => <span key={skill} className="tag">{skill}</span>)}
                   </div>
                 </div>
-              <div className="skills-group">
-                  <h4>Frontend</h4>
+                
+                {/* TAMBAHKAN CLASS 'frontend-card' DI SINI */}
+                <div className="skills-group frontend-card">
+                  <h4><i className="fas fa-desktop"></i> Frontend</h4>
                   <div className="tags">
                     {personalInfo.skills.Frontend.map(skill => <span key={skill} className="tag">{skill}</span>)}
                   </div>
                 </div>
+
+                {/* Grup lainnya biarkan seperti aslinya */}
                 <div className="skills-group">
-                  <h4>Frameworks & Web</h4>
+                  <h4><i className="fas fa-layer-group"></i> Frameworks & Web</h4>
                   <div className="tags">
                     {personalInfo.skills.frameworks.map(skill => <span key={skill} className="tag tech-tag">{skill}</span>)}
                   </div>
                 </div>
                 <div className="skills-group">
-                  <h4>Internet of Things (IoT)</h4>
+                  <h4><i className="fas fa-microchip"></i> Internet of Things (IoT)</h4>
                   <div className="tags">
                     {personalInfo.skills.iot.map(skill => <span key={skill} className="tag iot-tag">{skill}</span>)}
                   </div>
                 </div>
                 <div className="skills-group">
-                  <h4>Tools & DB</h4>
+                  <h4><i className="fas fa-tools"></i> Tools & DB</h4>
                   <div className="tags">
                     {personalInfo.skills.tools.map(skill => <span key={skill} className="tag tool-tag">{skill}</span>)}
                   </div>
