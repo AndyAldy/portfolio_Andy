@@ -47,5 +47,12 @@ export const projectsData = [
     category: "Social Tech",
     description: "Berkontribusi dalam program pengabdian masyarakat (KKN) dengan fokus utama pada pemanfaatan platform digital untuk manajemen dokumentasi teknis serta publikasi potensi lokal desa.",
     tech: ["Web Technologies", "Digitalization", "Technical Documentation"] // [cite: 25]
+  },
+  {
+    id: 5,
+    title: "Aplikasi Servis Motor",
+    category: "Tech Engineering",
+    description: "Pertama kali Membangun Aplikasi Desktop/Software berbasis Golang yang berfokus pada monitoring Servis Motor supaya bisa mengetahui apakah Motor sudah selesai di servis atau belum",
+    tech: ["Wails React.js", "MySQL", "Xampp", "PHPMYADMIN", "CSS", "GOLang"]
   }
 ];
