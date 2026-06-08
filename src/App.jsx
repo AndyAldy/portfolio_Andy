@@ -3,16 +3,14 @@ import { Analytics } from "@vercel/analytics/react"
 import fotoProfil from '/assets/img/profile.jpg';
 import { portfolioData } from './data/portofolioData'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './app.css'
 
 function App() {
-  // State untuk melacak halaman dan filter
   const [activePage, setActivePage] = useState('home');
   const [activeFilter, setActiveFilter] = useState('All');
-  
-  // State untuk melacak bahasa yang aktif ('id' atau 'en')
   const [lang, setLang] = useState('id');
 
-  // Efek untuk memunculkan alert saat pertama kali web dimuat
+  // Efek untuk memunculkan alert (Hanya muncul sekali di awal)
   useEffect(() => {
     const hasSeenAlert = sessionStorage.getItem('langAlerted');
     if (!hasSeenAlert) {
@@ -21,22 +19,18 @@ function App() {
     }
   }, []);
 
-  // Ambil data dari portofolioData.js secara dinamis berdasarkan bahasa yang dipilih
   const currentData = portfolioData[lang];
   const personalInfo = currentData.personalInfo;
   const projectsData = currentData.projectsData;
 
-  // Kalkulasi data proyek yang terfilter
   const filteredProjects = activeFilter === 'All' 
     ? projectsData 
     : projectsData.filter(p => p.category === activeFilter);
 
-  // Fungsi untuk mengubah bahasa
   const toggleLanguage = () => {
     setLang(lang === 'id' ? 'en' : 'id');
   };
 
-  // Kategori filter dinamis
   const filterCategories = [
     { id: 'All', label: lang === 'id' ? 'Semua' : 'All' },
     { id: 'Tech Engineering', label: 'Tech Engineering' },
@@ -47,10 +41,10 @@ function App() {
   return (
     <div className="app-container">
       
-      {/* Tombol Pengganti Bahasa (Sekarang menggunakan class CSS) */}
+      {/* Tombol Pengganti Bahasa (Modern Glassmorphism) */}
       <div className="lang-toggle-container">
         <button className="lang-toggle-btn" onClick={toggleLanguage}>
-          {lang === 'id' ? '🇮🇩 ID' : '🇬🇧 EN'}
+          <i className="fas fa-globe"></i> {lang === 'id' ? 'ID' : 'EN'}
         </button>
       </div>
 
@@ -118,47 +112,70 @@ function App() {
         {activePage === 'about' && (
           <div className="tab-page-content fade-in">
             <div className="about-grid">
-              <div className="about-card">
+              <div className="about-card" style={{ marginBottom: '40px' }}>
                 <p>{personalInfo.about}</p>
               </div>
               
-<div className="skills-display">
-                <h3>{personalInfo.uiText.coreTech}</h3>
+              <div className="skills-display">
+                <h3 className="section-title">{personalInfo.uiText.coreTech}</h3>
                 
-                {/* TAMBAHKAN CLASS 'backend-card' DI SINI */}
-                <div className="skills-group backend-card">
-                  <h4><i className="fas fa-server"></i> Backend</h4>
-                  <div className="tags">
-                    {personalInfo.skills.Backend.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                <div className="skills-grid">
+                  
+                  {/* Card Backend */}
+                  <div className="skills-group backend-card">
+                    <div className="card-header">
+                      <div className="icon-box"><i className="fas fa-server"></i></div>
+                      <h4>Backend</h4>
+                    </div>
+                    <div className="tags">
+                      {personalInfo.skills.Backend.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
-                </div>
-                
-                {/* TAMBAHKAN CLASS 'frontend-card' DI SINI */}
-                <div className="skills-group frontend-card">
-                  <h4><i className="fas fa-desktop"></i> Frontend</h4>
-                  <div className="tags">
-                    {personalInfo.skills.Frontend.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                  
+                  {/* Card Frontend */}
+                  <div className="skills-group frontend-card">
+                    <div className="card-header">
+                      <div className="icon-box"><i className="fas fa-desktop"></i></div>
+                      <h4>Frontend</h4>
+                    </div>
+                    <div className="tags">
+                      {personalInfo.skills.Frontend.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
-                </div>
 
-                {/* Grup lainnya biarkan seperti aslinya */}
-                <div className="skills-group">
-                  <h4><i className="fas fa-layer-group"></i> Frameworks & Web</h4>
-                  <div className="tags">
-                    {personalInfo.skills.frameworks.map(skill => <span key={skill} className="tag tech-tag">{skill}</span>)}
+                  {/* Card Frameworks */}
+                  <div className="skills-group frameworks-card">
+                    <div className="card-header">
+                      <div className="icon-box"><i className="fas fa-layer-group"></i></div>
+                      <h4>Frameworks & Web</h4>
+                    </div>
+                    <div className="tags">
+                      {personalInfo.skills.frameworks.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
-                </div>
-                <div className="skills-group">
-                  <h4><i className="fas fa-microchip"></i> Internet of Things (IoT)</h4>
-                  <div className="tags">
-                    {personalInfo.skills.iot.map(skill => <span key={skill} className="tag iot-tag">{skill}</span>)}
+                  
+                  {/* Card IoT */}
+                  <div className="skills-group iot-card">
+                    <div className="card-header">
+                      <div className="icon-box"><i className="fas fa-microchip"></i></div>
+                      <h4>IoT Systems</h4>
+                    </div>
+                    <div className="tags">
+                      {personalInfo.skills.iot.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
-                </div>
-                <div className="skills-group">
-                  <h4><i className="fas fa-tools"></i> Tools & DB</h4>
-                  <div className="tags">
-                    {personalInfo.skills.tools.map(skill => <span key={skill} className="tag tool-tag">{skill}</span>)}
+                  
+                  {/* Card Tools & DB */}
+                  <div className="skills-group tools-card">
+                    <div className="card-header">
+                      <div className="icon-box"><i className="fas fa-tools"></i></div>
+                      <h4>Tools & DB</h4>
+                    </div>
+                    <div className="tags">
+                      {personalInfo.skills.tools.map(skill => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
+
                 </div>
               </div>
             </div>
