@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import fotoProfil from '/assets/img/profile.jpg';
 import { portfolioData } from './data/portofolioData'; 
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import './app.css'
 
 function App() {
