@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Analytics } from "@vercel/analytics/react"
-import fotoProfil from '/assets/img/profile.jpg';
+import { Analytics } from "@vercel/analytics/react";
 import { portfolioData } from './data/portofolioData'; 
-import './app.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// 1. INI SANGAT PENTING: Memanggil App.css agar desain modernnya aktif!
+import './App.css'; 
 
 function App() {
   const [activePage, setActivePage] = useState('home');
   const [activeFilter, setActiveFilter] = useState('All');
   const [lang, setLang] = useState('id');
 
-  // Efek untuk memunculkan alert (Hanya muncul sekali di awal)
+  // Alert petunjuk ganti bahasa (hanya muncul sekali)
   useEffect(() => {
     const hasSeenAlert = sessionStorage.getItem('langAlerted');
     if (!hasSeenAlert) {
@@ -40,17 +42,18 @@ function App() {
   return (
     <div className="app-container">
       
-      {/* Tombol Pengganti Bahasa (Modern Glassmorphism) */}
+      {/* Tombol Terjemahan Modern */}
       <div className="lang-toggle-container">
         <button className="lang-toggle-btn" onClick={toggleLanguage}>
           <i className="fas fa-globe"></i> {lang === 'id' ? 'ID' : 'EN'}
         </button>
       </div>
 
-      {/* 1. Header Profile */}
+      {/* Header Profile */}
       <header className="profile-header">
         <div className="profile-frame">
-        <img src={fotoProfil} alt={personalInfo.name} className="profile-img" />
+          {/* 2. SOLUSI ERROR BUILD: Panggil gambar langsung dengan URL string, tanpa perlu di-import */}
+          <img src="/assets/img/profile.jpg" alt={personalInfo.name} className="profile-img" />
         </div>
         <h1 className="glitch-text">{personalInfo.name}</h1>
         <h2>{personalInfo.title} | {personalInfo.institution}</h2>
@@ -61,7 +64,7 @@ function App() {
         </div>
       </header>
 
-      {/* 2. Navigasi Utama */}
+      {/* Navigasi Tab */}
       <nav className="profile-nav">
         <button 
           className={`nav-tab-btn ${activePage === 'home' ? 'active' : ''}`} 
@@ -89,7 +92,7 @@ function App() {
         </button>
       </nav>
 
-      {/* 3. Main Content Area */}
+      {/* Konten Utama */}
       <main className="page-content-wrapper container">
         
         {/* Halaman Home */}
@@ -118,9 +121,9 @@ function App() {
               <div className="skills-display">
                 <h3 className="section-title">{personalInfo.uiText.coreTech}</h3>
                 
+                {/* 3. STRUKTUR GRID MODERN: Agar tampilan Card Skills jadi sejajar */}
                 <div className="skills-grid">
                   
-                  {/* Card Backend */}
                   <div className="skills-group backend-card">
                     <div className="card-header">
                       <div className="icon-box"><i className="fas fa-server"></i></div>
@@ -131,7 +134,6 @@ function App() {
                     </div>
                   </div>
                   
-                  {/* Card Frontend */}
                   <div className="skills-group frontend-card">
                     <div className="card-header">
                       <div className="icon-box"><i className="fas fa-desktop"></i></div>
@@ -142,7 +144,6 @@ function App() {
                     </div>
                   </div>
 
-                  {/* Card Frameworks */}
                   <div className="skills-group frameworks-card">
                     <div className="card-header">
                       <div className="icon-box"><i className="fas fa-layer-group"></i></div>
@@ -153,7 +154,6 @@ function App() {
                     </div>
                   </div>
                   
-                  {/* Card IoT */}
                   <div className="skills-group iot-card">
                     <div className="card-header">
                       <div className="icon-box"><i className="fas fa-microchip"></i></div>
@@ -164,7 +164,6 @@ function App() {
                     </div>
                   </div>
                   
-                  {/* Card Tools & DB */}
                   <div className="skills-group tools-card">
                     <div className="card-header">
                       <div className="icon-box"><i className="fas fa-tools"></i></div>
@@ -181,7 +180,7 @@ function App() {
           </div>
         )}
 
-        {/* Halaman Portofolio Proyek */}
+        {/* Halaman Portofolio */}
         {activePage === 'projects' && (
           <div className="tab-page-content fade-in">
             <div className="filter-tabs">
