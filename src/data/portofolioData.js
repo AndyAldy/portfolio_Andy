@@ -90,7 +90,7 @@ export const portfolioData = {
         description: "Membuat Sistem berbasis website menggunakan React.js sebagai framework untuk memenuhi Project UAS dari mata kuliah Data Mining yang menggunakan metode Clustering dan model K-Means",
         tech: ["React.js", "MySQL", "Tailwind CSS", "CSV"],
         link: "https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis",
-        demourl: "https://customer-segmentation-rosy.vercel.app/",
+        demoUrl: "https://customer-segmentation-rosy.vercel.app/",
       }
     ]
   },
@@ -185,7 +185,7 @@ export const portfolioData = {
         description: "Built a website-based system using React.js to satisfy the final exam project for the Data Mining course, applying clustering techniques and the K-Means model.",
         tech: ["React.js", "MySQL", "Tailwind CSS", "CSV"],
         link: "https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis",
-        demourl: "https://customer-segmentation-rosy.vercel.app/",
+        demoUrl: "https://customer-segmentation-rosy.vercel.app/",
       }
     ]
   }
