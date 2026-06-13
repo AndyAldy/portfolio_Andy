@@ -9,7 +9,7 @@ export const portfolioData = {
       skills: {
         Backend: ["Dart", "PHP", "Python", "JavaScript", "REST API", "Kotlin", "MYSQL", "SQLite", "GOLang"],
         Frontend: ["HTML5", "CSS3", "Dart", "Java", "Bootstrap"],
-        frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Laravel", "Wails.JS"],
+        frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Laravel", "Wails.JS", "Bootstrap"],
         iot: ["ESP32", "Arduino", "MQTT Protocol", "Sensor Integration"],
         tools: ["Git/GitHub", "Visual Studio Code", "Java NetBeans", "XAMPP"]
       },
@@ -95,7 +95,7 @@ export const portfolioData = {
       skills: { 
         Backend: ["Dart", "PHP", "Python", "JavaScript", "REST API", "Kotlin", "MYSQL", "SQLite", "GOLang"],
         Frontend: ["HTML5", "CSS3", "Dart", "Java", "Bootstrap"],
-        frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Laravel", "Wails.JS"],
+        frameworks: ["React.js", "Flutter", "CodeIgniter 4", "Laravel", "Wails.JS", "Bootstrap"],
         iot: ["ESP32", "Arduino", "MQTT Protocol", "Sensor Integration"],
         tools: ["Git/GitHub", "Visual Studio Code", "Java NetBeans", "XAMPP"]
       },
