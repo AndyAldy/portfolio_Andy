@@ -195,7 +195,7 @@ function App() {
               ))}
             </div>
 
-            <div className="projects-grid">
+              <div className="projects-grid">
               {filteredProjects.map(project => (
                 <div key={project.id} className="project-card">
                   <span className="card-category">{project.category}</span>
@@ -205,6 +205,31 @@ function App() {
                     {project.tech.map(techItem => (
                       <span key={techItem} className="tech-mini-tag">#{techItem}</span>
                     ))}
+                  </div>
+                  {/* --- TAMBAHKAN BAGIAN PROJECT LINKS INI --- */}
+                  <div className="project-links">
+                    {/* Render Link Source/Repo */}
+                    {project.link && (
+                      Array.isArray(project.link) ? (
+                        project.link.map((url, idx) => (
+                          <a key={idx} href={url} target="_blank" rel="noopener noreferrer" className="btn-project-link">
+                            <i className="fas fa-link"></i> {lang === 'id' ? 'Sumber' : 'Source'} {idx + 1}
+                          </a>
+                        ))
+                      ) : (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-project-link">
+                          <i className={project.link.includes('github.com') ? "fab fa-github" : "fas fa-link"}></i> 
+                          {project.link.includes('github.com') ? 'GitHub Repo' : (lang === 'id' ? 'Sumber Code' : 'Source Code')}
+                        </a>
+                      )
+                    )}
+                    
+                    {/* Render Link Live Demo */}
+                    {project.demoUrl && (
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="btn-project-demo">
+                        <i className="fas fa-external-link-alt"></i> Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}

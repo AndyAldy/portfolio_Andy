@@ -39,7 +39,7 @@ export const portfolioData = {
         title: "Telco Customer Churn Analysis",
         category: "Data Analytics",
         description: "Melakukan analisis data mendalam menggunakan dataset Telco Customer Churn untuk memprediksi tingkat retensi pelanggan, mengidentifikasi pola kebiasaan pengguna, serta menyusun rekomendasi strategi berbasis data.",
-        tech: ["Python", "Altair AI Studio", "Data Analytics", "Data Modeling"],
+        tech: ["Python", "Altair AI Studio", "Data Analytics", "Data Modeling", "CSV"],
         link: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn", // 🔗 Link Repositori GitHub
       },
       {
@@ -125,7 +125,7 @@ export const portfolioData = {
         title: "Telco Customer Churn Analysis",
         category: "Data Analytics",
         description: "Conducted in-depth data analysis using the Telco Customer Churn dataset to predict customer retention rates, identify user habit patterns, and develop data-driven strategy recommendations.",
-        tech: ["Python", "Altair AI Studio", "Data Analytics", "Data Modeling"],
+        tech: ["Python", "Altair AI Studio", "Data Analytics", "Data Modeling", "CSV"],
         link: "https://www.kaggle.com/datasets/blastchar/telco-customer-churn", // 🔗 
       },
       {
