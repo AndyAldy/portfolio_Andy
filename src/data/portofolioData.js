@@ -77,11 +77,20 @@ export const portfolioData = {
       {
         id: 6,
         title: "Sistem Rekomendasi Musik dan Film",
-        category: "Tech Engineering",
+        category: "Tech Engineering & Data Analytics",
         description: "Membuat Website Sistem menggunakan datasets dari kaggle dan API dari TMDB untuk mengambil gambarnya dan menggunakan url dari Itunes untuk gambar musiknya, Sistem ini dibuat untuk menyelesaikan project akhir mata kuliah Sistem Rekomendasi",
         tech: ["CSV", "React.js", "Xampp", "CSS"],
         link: ["https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata", "https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset"],
         demoUrl: "https://recommendation-music-movies.vercel.app/" // 🔗 
+      },
+      {
+        id: 7,
+        title: "Sistem Segmentasi Pelanggan",
+        category: "Tech Engineering & Data Analytics",
+        description: "Membuat Sistem berbasis website menggunakan React.js sebagai framework untuk memenuhi Project UAS dari mata kuliah Data Mining yang menggunakan metode Clustering dan model K-Means",
+        tech: ["React.js", "MySQL", "Tailwind CSS", "CSV"],
+        link: "https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis",
+        demourl: "https://customer-segmentation-rosy.vercel.app/",
       }
     ]
   },
@@ -163,11 +172,20 @@ export const portfolioData = {
       {
         id: 6,
         title: "Movie and Music Recommendation System",
-        category: "Tech Engineering",
+        category: "Tech Engineering & Data Analytics",
         description: "Built a web-based system using datasets from Kaggle and the TMDB API to fetch movie images, along with iTunes URLs for music images. This system was developed as the final project for the Recommendation Systems course.",
         tech: ["CSV", "React.js", "Xampp", "CSS"],
         link: ["https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata", "https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset"],
         demoUrl: "https://recommendation-music-movies.vercel.app/" // 🔗 
+      },
+      {
+        id: 7,
+        title: "Customer Segmentation System",
+        category: "Tech Engineering & Data Analytics",
+        description: "Built a website-based system using React.js to satisfy the final exam project for the Data Mining course, applying clustering techniques and the K-Means model.",
+        tech: ["React.js", "MySQL", "Tailwind CSS", "CSV"],
+        link: "https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis",
+        demourl: "https://customer-segmentation-rosy.vercel.app/",
       }
     ]
   }
